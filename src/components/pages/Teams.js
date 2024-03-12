@@ -11,7 +11,6 @@ export default function Teams() {
                 <Table />
                 <Team />
             </div>
-
         </>
 
     )
