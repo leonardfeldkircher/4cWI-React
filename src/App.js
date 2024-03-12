@@ -1,13 +1,28 @@
 import React from "react";
-import Header from "./laliga/header";
-import Table from "./laliga/table";
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import Main from "./components/pages/Main";
+import Teams from "./components/pages/Teams";
+
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Main/>, 
+
+  },
+  {
+    path: "/teams",
+    element: <Teams/>, 
+
+  },
+]);
 
 function App() {
   return (
-    <div className="App">
-      <Table/>
-      <Header/>
-    </div>
+    <RouterProvider router={router} />
   );
 }
 
